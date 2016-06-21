@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='main.css'>
+	<script src='main.js'></script>
+	<title>L-systems</title>
+  </head>
+  <body>
+    <h1>L-systems</h1>
+	<div id="main">
+	  <div id="in">
+	    <div id="define">
+		  <table>
+		    <tr class='trunk'>
+			  <td><label>Trunk</label></td>
+			  <td><input id='data-trunk'></td>
+			</tr>
+		    <tr class='branch'>
+			  <td><label>Branch</label></td>
+			  <td><input id='data-branch'></td>
+			  <td><button class='add'>+</button></td>
+			  <td><button class='remove' hidden>-</button></td>
+			</tr>
+		    <tr class='leaf'>
+			  <td><label>Leaf</label></td>
+			  <td><input id='data-leaf'></input></td>
+			</tr>
+		  </table>
+		  <button id="start">Render</button>
+		</div>
+		<p id="message">Output: </p>
+		<p id="generated">Code: </p>
+		<div id="tutorial">
+		  <table>
+		    <tr>
+			  <td>F</td>
+			  <td>Move forward (2 digits)</td>
+			</tr>
+			<tr>
+			  <td>A</td>
+			  <td>Turn clockwise (3 digits)</td>
+			</tr>
+			<tr>
+			  <td>a</td>
+			  <td>Turn anti-clockwise (3 digits)</td>
+			</tr>
+			<tr>
+			  <td>U</td>
+			  <td>Pen up</td>
+			</tr>
+			<tr>
+			  <td>D</td>
+			  <td>Pen down</td>
+			</tr>
+			<tr>
+			  <td>C</td>
+			  <td>Set pen colour (6 digit hex color)</td>
+			</tr>
+			<tr>
+			  <td>T</td>
+			  <td>Set pen thickness (1 digit)</td>
+			</tr>
+			<tr>
+			  <td>T+</td>
+			  <td>Increase pen thickness</td>
+			</tr>
+			<tr>
+			  <td>T-</td>
+			  <td>Decrease pen thickness</td>
+			</tr>
+			<tr>
+			  <td>[</td>
+			  <td>Save</td>
+			</tr>
+			<tr>
+			  <td>]</td>
+			  <td>Restore</td>
+			</tr>
+			<tr>
+			  <td>B</td>
+			  <td>Branch (if last branch, leaf)</td>
+			</tr>
+			<tr>
+			  <td>R</td>
+			  <td>Single digit random number</td>
+			</tr>
+		  </table>
+		</div>
+	  </div>
+	  <div id="out">
+	    <canvas id="canvas">Sorry, this demo is not supported</canvas>
+	  </div>
+	</div>
+  </body>
+</html>
