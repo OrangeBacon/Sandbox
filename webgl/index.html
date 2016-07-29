@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Webgl tests</title>
+    <script src='main.js'></script>
+  </head>
+  <body>
+    <canvas id="c" width='640' height='480'>
+	  <p>Your browser does not support <code>&lt;canvas&gt;</code></p>
+	</canvas>
+	<!--shaders-->
+	<script id="shader-fs" type ="x-shader/x-fragment">
+	  void main(void){
+	    gl_FragColor = vec4(1,1,1,1);
+	  }
+	</script>
+	<script id="shader-vs" type="x-shader/x-vertex">
+	  attribute vec3 aVertexPosition;
+	  
+	  uniform mat4 uMVMatrix;
+	  uniform mat4 uPMatrix;
+	  
+	  void main(void){
+	    gl_position = upMatrix * uMVMatrix * vec4(aVertexPosition, 1);
+	  }
+	</script>
+  </body>
+</html>
